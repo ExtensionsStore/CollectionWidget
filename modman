@@ -1,0 +1,4 @@
+app/code/community/ExtensionsStore/CollectionWidget                                     app/code/community/ExtensionsStore/CollectionWidget
+app/design/adminhtml/default/default/template/extensions_store/collectionwidget         app/design/adminhtml/default/default/template/extensions_store/collectionwidget
+app/design/frontend/base/default/template/extensions_store/collectionwidget             app/design/frontend/base/default/template/extensions_store/collectionwidget
+app/etc/modules/ExtensionsStore_CollectionWidget.xml                                    app/etc/modules/ExtensionsStore_CollectionWidget.xml

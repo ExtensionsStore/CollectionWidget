@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @category    ExtensionsStore
+ * @package     ExtensionsStore_CollectionWidget
+ * @author      Extensions Store <admin@extensions-store.com>
+ */
+?>
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+    $sql = (string)$_productCollection->getSelect();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if($_productCollection->count()): ?>
+<div>
+    <?php foreach ($_productCollection as $_product): ?>
+        <ul class="">
+            <li>
+            	<div><?php echo $_product->getName()?></div>
+            	<div><?php echo $_product->getSku()?></div>
+            	<div><?php echo $_product->getFinalPrice()?></div>
+            	<div><?php echo $_product->getQtyOrdered()?></div>
+            </li>
+        </ul>
+    <?php endforeach ?>
+</div>
+<?php endif; ?>

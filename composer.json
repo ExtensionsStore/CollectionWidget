@@ -1,0 +1,18 @@
+{
+    "name": "extensions-store/collectionwidget",
+    "license": "GPL-3.0",
+    "type": "magento-module",
+    "description": "Customize a collection of products in widget configuration for display in static block, CMS page or layout update.",
+    "homepage": "https://github.com/ExtensionsStore/CollectionWidget.git",
+    "require": {
+        "php": ">=5.3",
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors": [
+        {
+            "name": "Extensions Store",
+            "email": "admin@extensions-store.com",
+            "role": "Author/Maintainer"
+        }
+    ]
+}

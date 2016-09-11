@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    ExtensionsStore
+ * @package     ExtensionsStore_CollectionWidget
+ * @author      Extensions Store <admin@extensions-store.com>
+ */
+-->
+<widgets>
+    <collectionwidget_widget type="collectionwidget/widget" 
+                       translate="name description" 
+                       module="collectionwidget">
+        <name>Collection Widget</name>
+        <description>Custom collection of products with parameters and template.</description>
+        <parameters>
+            <template translate="label description">
+                <label>Template</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>Path of template. Default is extensions_store/collectionwidget/list.phtml.</description>
+            </template>        
+            <category_id translate="label description">
+                <label>Category ID</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>The ID of the category.</description>
+            </category_id>
+            <attribute_filters translate="label description">
+                <label>Attribute Filters</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>array</type>
+                <helper_block>                
+                    <type>collectionwidget/adminhtml_attribute_filter</type>
+                </helper_block>
+                <description>Filter collection by attributes.</description>
+            </attribute_filters>                    
+            <product_links translate="label description">
+                <label>Product Links</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>
+                <values>
+                    <select translate="label">
+                        <value></value>
+                        <label>-- Please Select --</label>
+                    </select>   
+                    <relation translate="label">
+                        <value>1</value>
+                        <label>Related Products</label>
+                    </relation>                                   
+                    <up_sell translate="label">
+                        <value>4</value>
+                        <label>Upsell Products</label>
+                    </up_sell>                  
+                    <cross_sell translate="label">
+                        <value>5</value>
+                        <label>Cross Sell Products</label>
+                    </cross_sell>                  
+            	</values>             
+                <description>Linked products on product view.</description>                
+            </product_links>
+            <recently_viewed translate="label description">
+                <label>Recent Viewed Products</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>     
+                <values>
+                    <select translate="label">
+                        <value></value>
+                        <label>-- Please Select --</label>
+                    </select>   
+                    <desc translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </desc>                                   
+                    <asc translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </asc>                  
+            	</values>                          
+                <description>User's recently viewed products.</description>                
+            </recently_viewed>           
+            <news_from_date translate="label description">
+                <label>New From Date</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>Starting date for new products, format is Y-m-d.</description>                
+            </news_from_date>     
+            <news_to_date translate="label description">
+                <label>New To Date</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>Ending date for new products, format is Y-m-d. Leave blank for no end date.</description>                
+            </news_to_date>     
+            <bestsellers translate="label">
+                <label>Sort By Bestsellers</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>     
+                <values>
+                    <select translate="label">
+                        <value></value>
+                        <label>-- Please Select --</label>
+                    </select>   
+                    <desc translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </desc>                                   
+                    <asc translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </asc>                  
+            	</values>                          
+                <description>Order by most sold products.</description>                
+            </bestsellers> 
+            <bestsellers_from_date translate="label description">
+                <label>Bestsellers From Date</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>Starting date for bestselling products, format is Y-m-d.</description>                
+            </bestsellers_from_date>                                          	
+            <order translate="label description">
+                <label>Sort By</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <description>Attribute code to sort by.</description>                
+            </order>	    
+            <order_direction translate="label">
+                <label>Sort By Direction</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>
+                <values>
+                    <select translate="label">
+                        <value></value>
+                        <label>-- Please Select --</label>
+                    </select>   
+                    <desc translate="label">
+                        <value>DESC</value>
+                        <label>Descending</label>
+                    </desc>                                   
+                    <asc translate="label">
+                        <value>ASC</value>
+                        <label>Ascending</label>
+                    </asc>                  
+            	</values>                             
+            </order_direction>                    							
+            <page_size translate="label">
+                <label>Number of Products to Display</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+            </page_size>	            							
+        </parameters>
+    </collectionwidget_widget>
+</widgets>

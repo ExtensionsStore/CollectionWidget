@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * 
+ * @category    ExtensionsStore
+ * @package     ExtensionsStore_CollectionWidget
+ * @author      Extensions Store <admin@extensions-store.com>
+ */
+-->
+<config>
+    <modules>
+        <ExtensionsStore_CollectionWidget>
+            <version>0.8.0</version>
+        </ExtensionsStore_CollectionWidget>       
+    </modules>
+    <phpunit>
+        <suite>
+            <modules>
+                <ExtensionsStore_CollectionWidget />
+            </modules>
+        </suite>
+    </phpunit>   
+    <adminhtml>
+		<events>
+			<core_block_abstract_to_html_before>
+				<observers>
+					<form_element_type_array>
+						<class>collectionwidget/adminhtml_observer</class>
+						<method>addFormElementTypeArray</method>
+					</form_element_type_array>
+				</observers>
+			</core_block_abstract_to_html_before>
+		</events>
+    </adminhtml>    
+    <frontend>
+        <routers>
+            <collectionwidget>
+                <use>standard</use>
+                <args>
+                    <module>ExtensionsStore_CollectionWidget</module>
+                    <frontName>collectionwidget</frontName>
+                </args>
+            </collectionwidget>
+        </routers>
+    </frontend>    
+    <global> 
+        <blocks>
+            <collectionwidget>
+                <class>ExtensionsStore_CollectionWidget_Block</class>
+            </collectionwidget>                    
+        </blocks>             
+        <helpers>
+            <collectionwidget>
+                <class>ExtensionsStore_CollectionWidget_Helper</class>
+            </collectionwidget>        
+        </helpers>          
+        <models>
+            <collectionwidget>
+                <class>ExtensionsStore_CollectionWidget_Model</class>
+            </collectionwidget>        
+        </models>                  
+    </global>        
+</config>
